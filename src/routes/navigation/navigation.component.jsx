@@ -8,11 +8,12 @@ const Navigation = () => {
           <Link className='logo-container h-[100%] w-[70px] p-[25px] ' to='/'>
             
           </Link>
+
           <div className='flex w-[50%] h-[100%] items-center justify-between '>
             <Link className='p-[10px 15px] cursor-pointer mr-[20%] ' to='/browse'>
               <p className="flex right- text-[#5C5696] p-1 shadow-md shadow-[#965685] font-bold">Browse content</p>   
-              
             </Link>
+            
             <Link className='p-[10px 15px] ' to='/auth'>
             <p className="flex right- text-[#5C5696] p-1 shadow-md shadow-[#965685] font-bold">
             <h1 className="mr-2"> New user? Sign Up</h1>
