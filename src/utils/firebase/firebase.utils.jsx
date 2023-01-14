@@ -18,13 +18,15 @@ import {
   } from 'firebase/firestore'
 
   const firebaseConfig = {
-    apiKey: "AIzaSyDvvHxyEvi_LGr15lSnSC4qC92ybM2qSLo",
-    authDomain: "smthng-sold-db.firebaseapp.com",
-    projectId: "smthng-sold-db",
-    storageBucket: "smthng-sold-db.appspot.com",
-    messagingSenderId: "766298919988",
-    appId: "1:766298919988:web:597996f7b86c0cc5d3e661"
-};
+    apiKey: "AIzaSyBWQgjcVhaDvFfziZAwDNv4B4A7jlhgSkk",
+    authDomain: "smthng-sold.firebaseapp.com",
+    databaseURL: "https://smthng-sold-default-rtdb.firebaseio.com",
+    projectId: "smthng-sold",
+    storageBucket: "smthng-sold.appspot.com",
+    messagingSenderId: "83534615252",
+    appId: "1:83534615252:web:6d22446de43b28987ca141"
+  };
+  
 
 
 const firebaseApp = initializeApp(firebaseConfig);
@@ -48,7 +50,7 @@ const firebaseApp = initializeApp(firebaseConfig);
     ) => {
     if (!userAuth) return;
   
-      const userDocRef = doc(db, 'users', userAuth.uid );
+      const userDocRef = doc(db, 'users', userAuth.uid);
   
       const userSnapshot = await getDoc(userDocRef);
       // user data does not exist

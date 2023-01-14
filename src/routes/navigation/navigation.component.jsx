@@ -12,11 +12,11 @@ const Navigation = () => {
 
           <div className='flex w-[50%] h-[100%] items-center justify-between '>
             <Link className='p-[10px 15px] cursor-pointer mr-[20%] ' to='/browse'>
-              <p className="flex right- text-[#5C5696] p-2 shadow-md shadow-[#965685] rounded-lg font-bold transform duration-200 hover:scale-110 hover:text-[#a43587]">Browse content</p>   
+              <p className="flex right- text-[#003ECB] p-2 shadow-md shadow-[#2f3782] rounded-lg font-bold transform duration-200 hover:scale-110 hover:text-[#121087]">Browse content</p>   
             </Link>
             
             <Link className='p-[10px 15px] ' to='/auth'>
-            <p className="flex right- text-[#5C5696] p-2 mr-2 shadow-md shadow-[#965685] rounded-lg font-bold hover:text-[#a43587] transform duration-200 hover:scale-110">
+            <p className="flex right- text-[#003ECB] p-2 mr-2 shadow-md shadow-[#2f3782] rounded-lg font-bold hover:text-[#121087] transform duration-200 hover:scale-110">
             Sign in
             </p>
             </Link>

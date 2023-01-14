@@ -6,8 +6,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'mainClr': '#eec4dc',
-        'subClr': '#e27bb1',
+        'mainClr': '#EBF2FC',
+        'subClr': '#003dcb',
       },
       width: {
         medium: "600px",
