@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
 import { useState } from 'react';
 import FormInput from '../form-input/form-input';
@@ -58,6 +58,7 @@ const SignUpForm = () => {
   };
     
     return (
+      <Fragment>
       <div className='sign-up-container flex-column w-[380px] '>
         <h2 className='m-6' >Don't have an account?</h2>
         <span className='m-6'>Sign up with email and password</span>
@@ -111,6 +112,7 @@ const SignUpForm = () => {
           </Button>
         </form>
       </div>
+      </Fragment>
       );
 }
 

@@ -1,9 +1,11 @@
-// import SignUp from '../../components/sign-up/sign-up.component';
+import SignUpForm from '../../components/sign-up-form/sign-up-form.component';
 import SignInForm from '../../components/sign-in-form/sign-in-form.component';
 
 const Authentication = () => {
     return (
-        <div className=''>
+        <div 
+        className='flex items-center justify-center m-auto relative min-h-screen'>
+            <SignUpForm/>
            <SignInForm/> 
         </div>
     );
