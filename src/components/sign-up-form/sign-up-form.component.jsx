@@ -1,7 +1,6 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
 import { Outlet, Link } from 'react-router-dom';
 
-import { useState } from 'react';
 import FormInput from '../form-input/form-input';
 import {
   createAuthUserWithEmailAndPassword,
@@ -24,8 +23,6 @@ confirmPassword:''
 const SignUpForm = () => {
   const [formFields, setFormFields] = useState(defaultFormFields)
   const {displayName, email, password, confirmPassword } = formFields;
-
-  console.log(formFields);
 
   const resetFormFields = () => {
     setFormFields(defaultFormFields);
@@ -71,7 +68,7 @@ const SignUpForm = () => {
         className="mb-4 md:flex md:flex-wrap md:justify-between m-6"
         onSubmit={handleSubmit}>
          <div 
-         className="mb-6 justify-between md:w-5/6">
+         className="mb-6 justify-between md:w-9/12">
           <div 
           className="p-5 transform duration-200 hover:scale-110">
             <FormInput 

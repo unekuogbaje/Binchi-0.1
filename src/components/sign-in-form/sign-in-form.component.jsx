@@ -1,18 +1,13 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
 // import Button from 'antd/lib/button';
-import { useState } from 'react';
-
 import { Outlet, Link } from 'react-router-dom';
 import FormInput from '../form-input/form-input';
-
 import Button from '../button/button.component';
 import { 
     User, 
     Lock, 
     ChevronRight
 } from 'react-feather';
-
-
 import {
     signInWithGooglePopup,
     createUserDocumentFromAuth,
@@ -25,7 +20,7 @@ const defaultFormFields = {
 };
 
 const SignInForm = () => {
-    const [formFields, setFormFields] = useState(defaultFormFields)
+    const [formFields, setFormFields] = useState(defaultFormFields);
     const { email, password } = formFields;
 
     const resetFormFields = () => {
@@ -34,20 +29,18 @@ const SignInForm = () => {
 
 
     const signInWithGoogle = async () => {
-        const { user } = await signInWithGooglePopup();
-        await createUserDocumentFromAuth(user);
+      await signInWithGooglePopup();
     };
 
     const handleSubmit = async (event) => {
         event.preventDefault();
 
         try {
-            const response = await signInAuthUserWithEmailAndPassword(
+            await signInAuthUserWithEmailAndPassword(
              email, 
              password
             );
-            console.log(response);
-            resetFormFields();
+            resetFormFields(); 
         } catch (error) {
             switch (error.code) {
                 case 'auth/wrong-password':
@@ -78,7 +71,7 @@ const SignInForm = () => {
                      onSubmit={handleSubmit}
                         >  
                         <div
-                        className="mb-6 justify-between md:w-5/6">
+                        className="mb-6 justify-between md:w-9/12">
                          <div 
                          className="p-5 transform duration-200 hover:scale-110">
                          <User 
