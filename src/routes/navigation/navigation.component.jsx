@@ -19,9 +19,9 @@ const Navigation = () => {
           <h1 className="flex right- text-[#003ECB] p-2 shadow-md shadow-[#2f3782] rounded-lg font-bold transform duration-200 hover:scale-110 hover:text-[#121087]">Home</h1>
           </Link>
 
-          <div className='flex w-[50%] h-[100%] items-center justify-between '>
+          <div className='flex w-[60%] md:w-[50%] sm:w-[65%] h-[100%] items-center justify-between '>
             <Link className='p-[10px 15px] cursor-pointer mr-[20%] ' to='/browse'>
-              <h1 className="flex right- text-[#003ECB] p-2 shadow-md shadow-[#2f3782] rounded-lg font-bold transform duration-200 hover:scale-110 hover:text-[#121087]">Browse content</h1>   
+              <h1 className="flex right- text-[#003ECB] p-2 shadow-md shadow-[#2f3782] rounded-lg font-bold transform duration-200 hover:scale-110 hover:text-[#121087] ">Browse content</h1>   
             </Link>
 
             {currentUser ? (
@@ -39,7 +39,8 @@ const Navigation = () => {
                   </h1>
                 </Link>
                 )}
-                <CartIcon/>
+                <CartIcon
+                className=""/>
           </div>
           {isCartOpen && <Cartdropdown/>}
         </div>

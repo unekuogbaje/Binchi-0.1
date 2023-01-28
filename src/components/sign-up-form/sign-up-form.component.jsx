@@ -1,5 +1,5 @@
 import React, { Fragment, useState } from 'react';
-import { Outlet, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import FormInput from '../form-input/form-input';
 import {
@@ -9,7 +9,7 @@ import {
 
 import Button from '../button/button.component';
 
-import {  
+import {
   ChevronRight
 } from 'react-feather';
 
@@ -126,7 +126,7 @@ const SignUpForm = () => {
           className="transform duration-200 hover:scale-110 relative">
             <Button 
             type="submit"
-            className='flex ml-auto bg-mainClr hover:bg-blue-100 text-[#152447] rounded-full shadow-lg w-[50%] h-10 text-[16px] mt-[38px] p-[16px 20px] items-center shadow-[#2f3782]  font-bold border-[#2f3782] cursor-pointer'>
+            className='flex ml-auto bg-mainClr hover:bg-blue-100 text-[#003ECB] rounded-full shadow-lg w-[50%] h-10 text-[16px] mt-[38px] p-[16px 20px] items-center shadow-[#2f3782]  font-bold cursor-pointer'>
               <h1 className='ml-auto uppercase'> sign up </h1>
             <ChevronRight 
             className="text-[#003ECB] ml-auto"
