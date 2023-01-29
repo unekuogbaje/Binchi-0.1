@@ -38,23 +38,23 @@ export const CartProvider = ({ children }) => {
     const [cartItemCount, setCartItemCount] = useState(0);
 
     useEffect(() => {
-        const count = cartItems.reduce(
-            (total, cartItem) => total + cartItem.quantity,
-            0
-        );
-        setCartItemCount(count);
+      const count = cartItems.reduce(
+        (total, cartItem) => total + cartItem.quantity,
+        0
+      );
+      setCartItemCount(count);
     }, [cartItems]);
     
 
-    const addItemTocart = (productToAdd) => {
-        setCartItems(addCartItem(cartItems, productToAdd));
+    const addItemToCart = (product) => {
+        setCartItems(addCartItem(cartItems, product));
     }
 
     const value = { 
         isCartOpen, 
         setIsCartOpen,
         cartItems,
-        addItemTocart,
+        addItemToCart,
         cartItemCount,
     };
 

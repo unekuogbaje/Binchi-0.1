@@ -136,7 +136,7 @@ const SignInForm = () => {
                          New User?
                           <Link to={"/signup"}>
                             <h1 className="text-[#003ECB] hover:text-blue-900 ml-1 transform duration-200 hover:scale-110">
-                              Sign up
+                              Sign up here
                             </h1>
                           </Link>
                          </span>
