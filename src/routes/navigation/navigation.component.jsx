@@ -14,19 +14,19 @@ const Navigation = () => {
   const { isCartOpen } = useContext(CartContext);
     return (
       <Fragment>
-        <div className='navigation flex h-[70px] w-[100%] justify-between mb-[25px] '>
+        <div className='navigation flex h-[50px] w-[100%] justify-between mb-[25px] border-b-2 border-b-blue-800'>
           <Link className='p-[10px 15px] cursor-pointer pt-4 ' to='/'>
-          <h1 className="flex right- text-[#003ECB] p-2 shadow-md shadow-[#2f3782] rounded-lg font-bold transform duration-200 hover:scale-110 hover:text-[#121087]">Home</h1>
+          <h1 className="flex text-slate-600 p-2 transform duration-200 hover:scale-110 hover:text-[#121087]">Home</h1>
           </Link>
 
           <div className='flex w-[60%] md:w-[50%] sm:w-[65%] h-[100%] items-center justify-between '>
             <Link className='p-[10px 15px] cursor-pointer mr-[20%] ' to='/browse'>
-              <h1 className="flex right- text-[#003ECB] p-2 shadow-md shadow-[#2f3782] rounded-lg font-bold transform duration-200 hover:scale-110 hover:text-[#121087] ">Browse content</h1>   
+              <h1 className="flex right- text-slate-600 transform duration-200 hover:scale-110 hover:text-[#121087] ">Browse content</h1>   
             </Link>
 
             {currentUser ? (
               <Link className='p-[10px 15px] '>
-                <h1 className="flex right- text-[#003ECB] p-2 mr-2 shadow-md shadow-[#2f3782] rounded-lg font-bold hover:text-[#121087] transform duration-200 hover:scale-110"
+                <h1 className="flex right- text-slate-600 hover:text-[#121087] transform duration-200 hover:scale-110"
                 onClick={signOutUser} >
                 {' '}
                 Log Out{' '}
@@ -34,7 +34,7 @@ const Navigation = () => {
               </Link>
               ) : (
                 <Link className='p-[10px 15px] ' to='/auth'>
-                  <h1 className="flex right- text-[#003ECB] p-2 mr-2 shadow-md shadow-[#2f3782] rounded-lg font-bold hover:text-[#121087] transform duration-200 hover:scale-110">
+                  <h1 className="flex right- text-slate-600 hover:text-[#121087] transform duration-200 hover:scale-110">
                   My Account
                   </h1>
                 </Link>

@@ -10,7 +10,7 @@ import Browse from './routes/browse/browse';
 
 const App = () => {
     return (
-      <div className='bg-blue-50 min-h-screen '>
+      <div className='bg-white min-h-screen '>
         <Routes>
          <Route path='/' element={<Navigation/>}>
             <Route index element={<Home/>} />

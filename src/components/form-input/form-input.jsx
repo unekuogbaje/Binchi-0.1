@@ -1,9 +1,9 @@
 const FormInput = ({ label, ...otherProps }) => {
     return (
-        <div className="group relative m-[45px 0] ">
+        <div className="group relative ">
           <input
           {...otherProps}
-            className="form-input bg-mainClr b-none text-[18px] p-[10px 10px 10px 5px] block w-[100%] rounded-md border-b-[1px subClr] m-[25px 0] focus:outline-none "   
+            className="form-input bg-white b-none text-[18px] px-2.5 py-0.5 block w-full rounded-sm border-blue-300 border-2 mx-6 focus:outline-none "   
           />
         { label && (
             <label
