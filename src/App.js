@@ -5,8 +5,11 @@ import Navigation from './routes/navigation/navigation.component';
 import Authentication from './routes/authentication/authentication.component';
 import SignInForm from './components/sign-in-form/sign-in-form.component';
 import SignUpForm from './components/sign-up-form/sign-up-form.component';
+import ForgotPassword from './components/forgot-password/forgot-password';
 
 import Browse from './routes/browse/browse';
+
+import About from './routes/About/about';
 
 const App = () => {
     return (
@@ -18,6 +21,8 @@ const App = () => {
             <Route path='auth' element={<Authentication />} />
             <Route path='signin' element={<SignInForm/>} />
             <Route path='signup' element={<SignUpForm/>} />
+            <Route path='about' element={<About/>} />
+            <Route path='reset-password' element={<ForgotPassword/>} />
          </Route>
        </Routes>
 

@@ -9,19 +9,34 @@ import { CartContext } from '../../contexts/cart.context';
 
 import { signOutUser } from '../../utils/firebase/firebase.utils';
 
+import { 
+  ArrowUpRight, 
+  ChevronDown, 
+  ChevronRight
+} from 'react-feather';
+
 const Navigation = () => {
   const { currentUser } = useContext(UserContext);
   const { isCartOpen } = useContext(CartContext);
     return (
       <Fragment>
         <div className='navigation flex h-[50px] w-[100%] justify-between mb-[25px] border-b-2 border-b-blue-800'>
-          <Link className='p-[10px 15px] cursor-pointer pt-4 ' to='/'>
-          <h1 className="flex text-slate-600 p-2 transform duration-200 hover:scale-110 hover:text-[#121087]">Home</h1>
+          <Link className='flex-col p-[10px 15px] cursor-pointer pt-4 ' to='/'>
+          <span className="text-slate-800 p-2 transform duration-200 hover:scale-110 hover:text-[#121087]">Smthng
+          <span className='uppercase font-bold text-lg'>sold</span></span>
+          </Link>
+
+          <Link className='flex-col p-[10px 15px] cursor-pointer pt-4 ' to='/about'>
+          <span className="text-slate-600 p-2 transform duration-200 hover:scale-110 hover:text-[#121087]">About
+          </span>
           </Link>
 
           <div className='flex w-[60%] md:w-[50%] sm:w-[65%] h-[100%] items-center justify-between '>
-            <Link className='p-[10px 15px] cursor-pointer mr-[20%] ' to='/browse'>
-              <h1 className="flex right- text-slate-600 transform duration-200 hover:scale-110 hover:text-[#121087] ">Browse content</h1>   
+            <Link className='flex p-[10px 15px] cursor-pointer mr-[20%] gap-2 ' to='/browse'>
+              <span className="flex text-slate-600 transform duration-200 hover:scale-110 hover:text-[#121087] ">Browse content</span>
+              <ArrowUpRight
+              className='mt-1'
+                size={16} />   
             </Link>
 
             {currentUser ? (
@@ -33,10 +48,13 @@ const Navigation = () => {
                 </h1>
               </Link>
               ) : (
-                <Link className='p-[10px 15px] ' to='/auth'>
-                  <h1 className="flex right- text-slate-600 hover:text-[#121087] transform duration-200 hover:scale-110">
+                <Link className='flex p-[10px 15px] gap-2' to='/auth'>
+                  <span className="flex right- text-slate-600 hover:text-[#121087] transform duration-200 hover:scale-110">
                   My Account
-                  </h1>
+                  </span>
+                  <ChevronDown
+                  className='mt-1'
+                  size={16} />
                 </Link>
                 )}
                 <CartIcon

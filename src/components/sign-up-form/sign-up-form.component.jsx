@@ -65,12 +65,12 @@ const SignUpForm = () => {
       <div className='flex-column h-[550px] w-[450px] shadow-2xl shadow-[#003ECB] bg-white rounded-xl transform duration-200 hover:scale-110 m-auto'>
         <h2 className='w-full text-center text-slate-700 text-xl font-semibold m-6' >Let's get started</h2>
         <form 
-        className="md:flex md:flex-wrap md:justify-between m-4"
+        className="md:flex md:flex-wrap md:justify-between"
         onSubmit={handleSubmit}>
          <div 
-         className="mb-6 justify-between md:w-9/12">
+         className="mb-6 justify-between md:w-9/12 mr-14">
           <div 
-          className="p-2">
+          className="p-5">
             <FormInput 
             label=""
             placeholder="Name"
@@ -83,7 +83,7 @@ const SignUpForm = () => {
          </div>
           
           <div
-          className="p-2">
+          className="p-5">
           <FormInput 
           label=""
           placeholder="Email"
@@ -96,7 +96,7 @@ const SignUpForm = () => {
           </div>
           
           <div
-          className="p-2">
+          className="p-5">
           <FormInput 
           label=""
           placeholder="Password"
@@ -109,7 +109,7 @@ const SignUpForm = () => {
           </div>
 
           <div
-          className="p-2">
+          className="p-5">
           <FormInput
           label="" 
           placeholder="Confirm password"
@@ -137,7 +137,7 @@ const SignUpForm = () => {
          </div>
         </form>
 
-        <span className="block w-full text-center no-underline text-slate-700 hover:text-grey-darker mb-8 border-t-2 mt-20 text-lg">
+        <span className="block w-full text-center no-underline text-slate-700 hover:text-grey-darker mb-8 border-t-2  text-lg">
         Already have an account?
         <Link to={"/signin"}>
           <h1 className="text-[#003ECB] hover:text-blue-900 ml-1 transform duration-200 hover:scale-110">
