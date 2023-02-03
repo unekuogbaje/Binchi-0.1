@@ -8,7 +8,7 @@ export const addCartItem = (cartItems, productToAdd) => {
   // check if productToAdd is in cartItems
     const existingCartItem = cartItems.find(
       (cartItem) => cartItem.id === productToAdd.id
-      // meaning if cartItem's id value is equal to productToAdd id value, add said cartItem to cart
+      // if cartItem's id value is equal to productToAdd id value, add cartItem to cart
     );
   // if found, increase quantity
   
@@ -29,20 +29,20 @@ export const CartContext = createContext({
     setIsCartOpen: () => {},
     cartItems: [],
     addItemTocart: () => {},
-    cartItemCount: 0,
+    cartCount: 0,
 });
 
 export const CartProvider = ({ children }) => {
     const [isCartOpen, setIsCartOpen] = useState(false);
     const [cartItems, setCartItems] = useState([]);
-    const [cartItemCount, setCartItemCount] = useState(0);
+    const [cartCount, setCartCount] = useState(0);
 
     useEffect(() => {
-      const count = cartItems.reduce(
+      const newCartCount = cartItems.reduce(
         (total, cartItem) => total + cartItem.quantity,
         0
       );
-      setCartItemCount(count);
+      setCartCount(newCartCount);
     }, [cartItems]);
     
 
@@ -55,7 +55,7 @@ export const CartProvider = ({ children }) => {
         setIsCartOpen,
         cartItems,
         addItemToCart,
-        cartItemCount,
+        cartCount,
     };
 
     return (

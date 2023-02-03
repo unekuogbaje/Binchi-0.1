@@ -22,11 +22,11 @@ const ProductCard = ({ product }) => {
      className="w-full h-[95%] object-cover sm:object-scale-down mb-1 hover:opacity-80 "
      />
       <div 
-       className='footer flex w-full h-[5%] justify-between text-[18px] '>
+       className='footer flex w-full h-[5%] justify-center text-[18px] '>
        <span 
-       className='name w-[90%] mb-[15px] text-[#003ECB]'>{name}</span>
+       className='name w-[90%] mb-[15px] text-slate-600'>{name}</span>
        <span 
-       className='price w-[10%] text-[#003ECB]'>{price}</span>
+       className='price w-[10%] text-slate-600'>{price}</span>
       </div>
     </div>
 
@@ -35,15 +35,12 @@ const ProductCard = ({ product }) => {
       type="submit"
       onClick={addProductToCart}
       
-      className='flex hover:flex  bg-mainClr hover:bg-blue-100 text-[#003ECB] hover:opacity-85 rounded-full shadow-lg w-[50%] sm:w-[60%] h-10 text-[16px] p-[16px 20px] items-center shadow-[#2f3782]  font-bold border-[#2f3782] opacity-70 top-60 cursor-pointer'
+      className='flex hover:flex  bg-subClr hover:bg-blue-800 text-mainClr hover:opacity-85 rounded-md shadow-md w-[50%] sm:w-[60%] h-10 p-[16px 20px] items-center shadow-[#2f3782]  font-bold top-60 cursor-pointer'
       >
        <h1 
-       className='ml-auto uppercase text-sm'>
+       className='m-auto uppercase text-sm'>
         Add to cart
        </h1>
-       <ChevronRight 
-       className="text-[#003ECB] ml-auto"
-       size={28}/>
      </Button>
      </div>
     </div>
