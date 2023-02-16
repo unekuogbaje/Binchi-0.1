@@ -12,7 +12,8 @@ import { signOutUser } from '../../utils/firebase/firebase.utils';
 import { 
   ArrowUpRight, 
   ChevronDown, 
-  ChevronLeft
+  ChevronLeft,
+  Menu
 } from 'react-feather';
 
 const Navigation = () => {
