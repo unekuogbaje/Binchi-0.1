@@ -1,17 +1,16 @@
-import { useContext } from "react";
+import { Route, Routes } from "react-router-dom";
 
-import { ProductsContext } from "../../contexts/products.context";
-import ProductCard from "../../components/product-card/product-card";
+import CategoriesPreview from "../categories-preview/categories-preview";
+
+import Category from "../category/category";
 
 const Browse = () => {
-    const { products } = useContext(ProductsContext)
-    return (
-     <div className="grid grid-cols-4 gap-x-5 gap-y-2.5">
-     {products.map((product) => (
-       <ProductCard key={products.id} product={product} />
-        ))} 
-     </div>
-    );
+  return (
+    <Routes>
+      <Route index element={<CategoriesPreview/>} />
+      <Route path=':category' element={<Category/>} />
+    </Routes>
+  );
 };
 
 export default Browse;

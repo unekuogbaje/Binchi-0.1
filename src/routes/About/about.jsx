@@ -1,7 +1,9 @@
+import { Button } from "antd";
 const About = () => {
     return (
-      <div>
-        <span>I am the about page</span>
+      <div className="">
+        <h1>I am the about page</h1>
+        <Button className="mt-44 bg-mainClr">click me</Button>
       </div>
     );
 };

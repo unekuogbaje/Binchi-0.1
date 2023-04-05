@@ -15,17 +15,20 @@ import {
     doc,
     getDoc,
     setDoc,
+    collection,
+    writeBatch,
+    query,
+    getDocs
 
   } from 'firebase/firestore'
 
   const firebaseConfig = {
-    apiKey: "AIzaSyBWQgjcVhaDvFfziZAwDNv4B4A7jlhgSkk",
-    authDomain: "smthng-sold.firebaseapp.com",
-    databaseURL: "https://smthng-sold-default-rtdb.firebaseio.com",
-    projectId: "smthng-sold",
-    storageBucket: "smthng-sold.appspot.com",
-    messagingSenderId: "83534615252",
-    appId: "1:83534615252:web:6d22446de43b28987ca141"
+    apiKey: "AIzaSyCNR7g5RV56Lp1IqueVciCfSym9ssYO-FQ",
+    authDomain: "so-clean-cd12b.firebaseapp.com",
+    projectId: "so-clean-cd12b",
+    storageBucket: "so-clean-cd12b.appspot.com",
+    messagingSenderId: "413427791357",
+    appId: "1:413427791357:web:8b36857577a0616460d594"
   };
   
 
@@ -44,6 +47,36 @@ const firebaseApp = initializeApp(firebaseConfig);
   export const signInWithGoogleRedirect = () => signInWithRedirect(auth, googleProvider);
 
   export const db = getFirestore();
+
+  export const addCollectionAndDocuments = async (
+    collectionKey, 
+    objectsToAdd
+    ) => {
+    const collectionRef = collection(db, collectionKey);
+    const batch = writeBatch(db);
+
+    objectsToAdd.forEach((object) => {
+      const docRef = doc(collectionRef, object.title.toLowerCase());
+      batch.set(docRef, object);
+    });
+
+    await batch.commit();
+    console.log('done');
+  }; 
+
+  export const getCategoriesAndDocuments = async () => {
+    const collectionRef = collection(db, 'categories');
+    const q = query(collectionRef);
+
+    const querySnapshot = await getDocs(q);
+    const categoryMap = querySnapshot.docs.reduce((acc, docSnaopshot) => {
+      const { title, items } = docSnaopshot.data();
+      acc[title.toLowerCase()] = items;
+      return acc;
+    }, {});
+
+    return categoryMap;
+  };
 
   export const createUserDocumentFromAuth = async (
     userAuth, 
