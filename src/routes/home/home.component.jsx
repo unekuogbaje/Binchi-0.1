@@ -5,8 +5,7 @@ import SmSignins from '../../components/sm sign-ins/sm-sign-ins';
 const Home = () => {
         return ( 
          <div>
-          <Outlet/>
-             <SmSignins/>       
+          <Outlet/>      
          </div>  
         );
     
