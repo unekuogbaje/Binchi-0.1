@@ -15,16 +15,16 @@ const ProductCard = ({ product }) => {
     <div 
     className="flex-col space-y-7">
     <div 
-    className='w-full flex-col h-[350px] items-center '>
+    className='flex-col h-[350px] '>
      <img 
      src={imageUrl} 
      alt={`${name}`}
      className="w-full h-[95%] object-cover sm:object-scale-down mb-1 hover:opacity-80 "
      />
       <div 
-       className='footer flex w-full h-[5%] justify-between text-[18px] '>
+       className=' flex h-[5%] text-base '>
        <span 
-       className='name w-[90%] mb-[15px] text-[#003ECB]'>{name}</span>
+       className='name w-[85%] mb-[15px] text-[#003ECB]'>{name}</span>
        <span 
        className='price w-[10%] text-[#003ECB]'>{price}</span>
       </div>
@@ -35,10 +35,10 @@ const ProductCard = ({ product }) => {
       type="submit"
       onClick={addProductToCart}
       
-      className='flex hover:flex  bg-mainClr hover:bg-blue-100 text-[#003ECB] hover:opacity-85 rounded-full shadow-lg w-[50%] sm:w-[60%] h-10 text-[16px] p-[16px 20px] items-center shadow-[#2f3782]  font-bold border-[#2f3782] opacity-70 top-60 cursor-pointer'
+      className='flex hover:flex  bg-mainClr hover:bg-blue-100 text-[#003ECB] hover:opacity-85 rounded-full shadow-sm w-[50%] sm:w-[60%] h-10 p-[16px 20px] items-center shadow-[#2f3782]  font-bold border-[#2f3782] opacity-70 top-60 cursor-pointer'
       >
        <h1 
-       className='ml-auto uppercase text-sm'>
+       className='ml-auto uppercase text-sm sm:text-xs md:text-sm lg:text-md'>
         Add to cart
        </h1>
        <ChevronRight 
