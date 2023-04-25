@@ -22,26 +22,22 @@ const Navigation = () => {
       <Fragment>
         <div className='navigation flex h-[50px] w-[100%] justify-between mb-[25px] border-b-2 border-b-blue-800'>
           <Link className='flex-col p-[10px 15px] cursor-pointer pt-4 ' to='/'>
-          <span className="text-slate-800 p-2 transform duration-200 hover:scale-110 hover:text-[#121087]">Smthng
-          <span className='uppercase font-bold text-lg'>sold</span></span>
+          <span className="text-slate-800 text-sm sm:text-xs md:text-lg lg:text-lg p-2 transform duration-200 hover:scale-110 hover:text-[#121087]">Binchi</span>
           </Link>
 
           <Link className='flex-col p-[10px 15px] cursor-pointer pt-4 ' to='/about'>
-          <span className="text-slate-600 p-2 transform duration-200 hover:scale-110 hover:text-[#121087]">About
+          <span className="text-slate-600 p-2 transform duration-200 hover:scale-110 hover:text-[#121087]">
           </span>
           </Link>
 
           <div className='flex w-[60%] md:w-[50%] sm:w-[65%] h-[100%] items-center justify-between '>
             <Link className='flex p-[10px 15px] cursor-pointer mr-[20%] gap-2 ' to='/browse'>
-              <span className="flex text-slate-600 transform duration-200 hover:scale-110 hover:text-[#121087] ">Browse content</span>
-              <ArrowUpRight
-              className='mt-1'
-                size={16} />   
+              <span className="flex text-slate-600 text-sm sm:text-xs md:text-lg lg:text-lg transform duration-200 hover:scale-110 hover:text-[#121087] ">Content</span>   
             </Link>
 
             {currentUser ? (
               <Link className='p-[10px 15px] '>
-                <h1 className="flex right- text-slate-600 hover:text-[#121087] transform duration-200 hover:scale-110"
+                <h1 className="flex text-slate-600 text-sm sm:text-xs md:text-lg lg:text-lg hover:text-[#121087] transform duration-200 hover:scale-110"
                 onClick={signOutUser} >
                 {' '}
                 Log Out{' '}
@@ -49,16 +45,13 @@ const Navigation = () => {
               </Link>
               ) : (
                 <Link className='flex p-[10px 15px] gap-2' to='/auth'>
-                  <span className="flex right- text-slate-600 hover:text-[#121087] transform duration-200 hover:scale-110">
-                  My Account
+                  <span className="flex text-slate-600 text-sm sm:text-xs md:text-lg lg:text-lg hover:text-[#121087] transform duration-200 hover:scale-110">
+                  Profile
                   </span>
-                  <ChevronDown
-                  className='mt-1'
-                  size={16} />
                 </Link>
                 )}
                 <CartIcon
-                className=""/>
+                className="text-sm sm:text-xs md:text-lg lg:text-lg"/>
           </div>
           {isCartOpen && <Cartdropdown/>}
         </div>
