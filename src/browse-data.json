@@ -2,55 +2,55 @@
     {
       "id": 1,
       "name": "Egusi soup condiments",
-      "imageUrl": "https://i.pinimg.com/564x/4b/ad/d7/4badd787edb483a9cc164cd276c80f75.jpg",
+      "imageUrl": "",
       "price": 25
     },
     {
       "id": 2,
       "name": "Okra soup condiments",
-      "imageUrl": "https://i.pinimg.com/564x/42/64/5a/42645af194895a2e69e4e8e76171a1b3.jpg",
+      "imageUrl": "",
       "price": 18
     },
     {
       "id": 3,
       "name": "Jollof rice condiments",
-      "imageUrl": "https://i.pinimg.com/564x/fb/e0/fa/fbe0facc1d642ee60209e143882865ad.jpg",
+      "imageUrl": "",
       "price": 35
     },
     {
       "id": 4,
       "name": "Pepersoup condiments",
-      "imageUrl": "https://i.pinimg.com/564x/41/97/a8/4197a83dad4ec2846ef7082f5dbcdfd9.jpg",
+      "imageUrl": "",
       "price": 25
     },
     {
       "id": 5,
       "name": "Ewa agoyin condiments",
-      "imageUrl": "https://i.pinimg.com/564x/01/3f/c7/013fc789795f9dac5ac4b956df1da03d.jpg",
+      "imageUrl": "",
       "price": 18
     },
     {
       "id": 6,
       "name": "Amala, ewedu and gbegiri condiments",
-      "imageUrl": "https://i.pinimg.com/564x/2e/b7/09/2eb709b27d19bd840aa61b5c0ea6d583.jpg",
+      "imageUrl": "",
       "price": 14
     },
     {
       "id": 7,
       "name": "Eforiro condiments",
-      "imageUrl": "https://i.pinimg.com/564x/f0/79/7e/f0797e47e94becb3fb5b430440eb1a87.jpg",
+      "imageUrl": "",
       "price": 18
     },
     {
       "id": 8,
       "name": "White soup condiments",
-      "imageUrl": "https://i.pinimg.com/564x/cd/26/e7/cd26e763d2dd4783cf1abea98ff14b6f.jpg",
+      "imageUrl": "",
       "price": 14
     },
     {
       "id": 9,
       "name": "Pap and tapioca",
-      "imageUrl": "https://i.pinimg.com/564x/30/25/90/30259058a0aaf302bc4870aa6901853c.jpg",
+      "imageUrl": "",
       "price": 16
     }
   ]
